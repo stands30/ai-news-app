@@ -49,6 +49,9 @@ const App = () => {
                 <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="alan logo" />
             </div>
             <NewsCards articles={newsArticles} activeArticle={activeArticle} />
+            <div className={classes.footer}>
+                 <p>Developed by stanley dsouza</p>
+            </div>
         </div>
     );
 }
