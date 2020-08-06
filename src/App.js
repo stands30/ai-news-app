@@ -5,13 +5,14 @@ import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles.js';
 
 import wordsToNumbers from 'words-to-numbers';
-
+import ReactGA from 'react-ga';
 const alanKey = 'bc27fc3eb5c0624c5435431b17bfff822e956eca572e1d8b807a3e2338fdd0dc/stage';
 const App = () => {
     const [newsArticles, setNewsArticles] = useState([]);
     const classes = useStyles();
     const [activeArticle, setActiveArticle] = useState(-1)
-
+    ReactGA.initialize('UA-162979718-2');
+    ReactGA.pageview('/');
     useEffect(() => {
         alanBtn({
             key: alanKey,
